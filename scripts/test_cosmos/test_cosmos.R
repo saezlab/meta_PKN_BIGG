@@ -2,6 +2,8 @@ library(readr)
 library(org.Hs.eg.db)
 library(stringr)
 library(cosmosR)
+library(metaboliteIDmapping)
+library(stringr)
 
 load("~/Dropbox/meta_PKN_BIGG/results/meta_PKN.RData")
 
@@ -43,7 +45,7 @@ test_for <- preprocess_COSMOS_signaling_to_metabolism(meta_network = meta_PKN,
                                                       signaling_data = signaling_input_COSMOS_vec,
                                                       metabolic_data = metab_input_COSMOS_vec,
                                                       diff_expression_data = RNA_input,
-                                                      maximum_network_depth = 8,
+                                                      maximum_network_depth = 3,
                                                       remove_unexpressed_nodes = T,
                                                       CARNIVAL_options = my_options
                                                       
@@ -53,3 +55,51 @@ my_options$timelimit <- 7200
 
 test_result_for <- run_COSMOS_signaling_to_metabolism(data = test_for,
                                                       CARNIVAL_options = my_options)
+
+SIF <- as.data.frame(test_result_for$weightedSIF)
+ATT <- as.data.frame(test_result_for$nodesAttributes)
+
+HMDB_mapper <- as.data.frame(metabolitesMapping[,c("Name","HMDB")])
+HMDB_mapper <- HMDB_mapper[complete.cases(HMDB_mapper),]
+HMDB_mapper_vec <- HMDB_mapper$Name
+names(HMDB_mapper_vec) <- HMDB_mapper$HMDB
+
+for(i in c(1,3))
+{
+  SIF[,i] <- sapply(SIF[,i], function(x, HMDB_mapper_vec){
+    x <- gsub("Metab__","",x)
+    x <- gsub("^Gene","Enzyme",x)
+    suffixe <- str_extract(x,"_[a-z]$")
+    print(suffixe)
+    x <- gsub("_[a-z]$","",x)
+    if(x %in% names(HMDB_mapper_vec))
+    {
+      x <- HMDB_mapper_vec[x]
+      x <- paste("Metab__",paste(x,suffixe,sep = ""),sep = "")
+    }
+    return(x)
+  },HMDB_mapper_vec = HMDB_mapper_vec)
+}
+
+ATT[,1] <- sapply(ATT[,1], function(x, HMDB_mapper_vec){
+  x <- gsub("Metab__","",x)
+  x <- gsub("^Gene","Enzyme",x)
+  suffixe <- str_extract(x,"_[a-z]$")
+  print(suffixe)
+  x <- gsub("_[a-z]$","",x)
+  if(x %in% names(HMDB_mapper_vec))
+  {
+    x <- HMDB_mapper_vec[x]
+    x <- paste("Metab__",x,sep = "")
+  }
+  if(!is.na(suffixe))
+  {
+    x <- paste(x,suffixe,sep = "")
+  }
+  return(x)
+},HMDB_mapper_vec = HMDB_mapper_vec)
+
+write_csv(SIF, file = "results/test/SIF_forward.csv")
+write_csv(ATT, file = "results/test/ATT_forward.csv") #Looks good
+
+#Let's do backward too

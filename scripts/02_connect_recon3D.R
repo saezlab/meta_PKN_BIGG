@@ -25,6 +25,83 @@ for(i in 1:2)
 }, HMDB_full_mapping_long_vec = HMDB_full_mapping_long_vec)
 }
 
+
+###
+
+enzyme_reacs <- unique(c(recon3D_bigg_no_cofactor$source, recon3D_bigg_no_cofactor$target))
+enzyme_reacs <- enzyme_reacs[grepl("^Gene",enzyme_reacs)]
+
+enzyme_reacs_reverse <- enzyme_reacs[grepl("_reverse",enzyme_reacs)]
+enzyme_reacs <- enzyme_reacs[!grepl("_reverse",enzyme_reacs)]
+
+new_df_list <- sapply(enzyme_reacs, function(enzyme_reac, recon3D_bigg_no_cofactor){
+  df <- recon3D_bigg_no_cofactor[which(recon3D_bigg_no_cofactor$source == enzyme_reac | recon3D_bigg_no_cofactor$target == enzyme_reac),]
+  if(dim(df)[1] < 2)
+  {
+    return(NA)
+  } else
+  {
+    if(dim(df)[1] < 3)
+    {
+      return(df)
+    } else
+    {
+      for(i in 1:dim(df)[1])
+      {
+        if(grepl("Metab__",df[i,1]))
+        {
+          counterpart <- which(gsub("_[a-z]$","",df[,2]) == gsub("_[a-z]$","",df[i,1]))
+          if(length(counterpart) > 0)
+          {
+
+            df[i,2] <- paste(df[i,2],paste("_TRANSPORTER",i,sep = ""),sep = "")
+            df[counterpart,1] <- paste(df[counterpart,1],paste("_TRANSPORTER",i,sep = ""),sep = "")
+          }
+        }
+      }
+      return(df)
+    }
+  }
+}, recon3D_bigg_no_cofactor = recon3D_bigg_no_cofactor)
+new_df <- as.data.frame(do.call(rbind,new_df_list))
+
+
+new_df_list <- sapply(enzyme_reacs_reverse, function(enzyme_reac_reverse, recon3D_bigg_no_cofactor){
+  df <- recon3D_bigg_no_cofactor[which(recon3D_bigg_no_cofactor$source == enzyme_reac_reverse | recon3D_bigg_no_cofactor$target == enzyme_reac_reverse),]
+  if(dim(df)[1] < 2)
+  {
+    return(NA)
+  } else
+  {
+    if(dim(df)[1] < 3)
+    {
+      return(df)
+    } else
+    {
+      for(i in 1:dim(df)[1])
+      {
+        if(grepl("Metab__",df[i,1]))
+        {
+          counterpart <- which(gsub("_[a-z]$","",df[,2]) == gsub("_[a-z]$","",df[i,1]))
+          if(length(counterpart) > 0)
+          {
+            transporter <- gsub("_reverse","",df[i,2])
+            transporter <- paste(transporter,paste(paste("_TRANSPORTER",i,sep = ""), "_reverse",sep = ""),sep = "")
+            df[i,2] <- transporter
+            df[counterpart,1] <- transporter
+          }
+        }
+      }
+      return(df)
+    }
+  }
+}, recon3D_bigg_no_cofactor = recon3D_bigg_no_cofactor)
+new_df_reverse <- as.data.frame(do.call(rbind,new_df_list))
+
+recon3D_bigg_no_cofactor <- as.data.frame(rbind(new_df, new_df_reverse))
+
+recon3D_bigg_no_cofactor <- recon3D_bigg_no_cofactor[complete.cases(recon3D_bigg_no_cofactor),]
+
 ###Build the connectors to omnipath
 elements <- unique(as.character(unlist(recon3D_bigg_no_cofactor)))
 elements <- elements[!grepl("Metab__",elements)]
@@ -34,7 +111,9 @@ connectors_list <- sapply(elements, function(x){
   # prefixe <- gsub("__.*","",x)
   # suffixe <- ifelse(grepl("_reverse$",x),"_reverse","")
   genes <- gsub(".*__","",x)
+  genes <- gsub("_TRANSPORTER[0-9]+","",genes)
   genes <- gsub("_reverse$","",genes)
+  print(genes)
   if(grepl("_",genes))
   {
     elements <- str_split(string = genes, pattern = "_")[[1]]

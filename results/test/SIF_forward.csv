@@ -1,0 +1,175 @@
+Node1,Sign,Node2,Weight
+CSNK2A1,1,TFAP2A,1
+PRKCE,-1,NOS3,0.93
+MAPK1,1,CAD,0.59
+MAPK1,1,PRDX6,1
+MAPK1,1,PPARA,0.04
+PRKCE,-1,GAD1,1
+PRKCE,-1,MAPK1,1
+HIF1A,1,HK2,0.38
+MYC,1,CAD,0.59
+TFAP2A,1,NME3,1
+HIF1A,1,LDHA,0.62
+PPARA,1,CPT1C,0.18
+MYC,1,LDHA,0.62
+SP1,1,LDHA,0.62
+TP53,-1,HK2,0.25
+MYC,1,HK2,0.38
+Enzyme1108__NOS3,1,Metab__Citrulline_c,0.62
+Enzyme2533__CPT1C,1,Metab__L-Octanoylcarnitine_c,0.56
+Enzyme4351__PRDX6,1,Metab__Oxiglutatione_c,1
+Enzyme5471__GAD1,1,Metab__Hypotaurine_c,1
+Metab__CDP_c,1,Enzyme9690__PKLR,0.58
+Enzyme9690__PKLR,1,Metab__2-Oxopropanoic acid_c,0.58
+Enzyme9715__HK2,1,Metab__Beta-D-Fructose 6-phosphate_c,0.21
+Enzyme1583__ALDOB_reverse,1,HC00361,0.69
+Metab__D-Erythrose 4-phosphate_c,1,Enzyme1583__ALDOB_reverse,0.69
+Enzyme1585__PFKL_reverse,1,Metab__D-Sedoheptulose 7-phosphate_c,0.56
+HC00361,1,Enzyme1585__PFKL_reverse,0.56
+Enzyme3740__BCAT1_reverse,1,Metab__alpha-Ketoglutaric acid_c,0.21
+Metab__2-Ketoisovaleric acid_c,1,Enzyme3740__BCAT1_reverse,0.21
+Enzyme4097__LDHB_LDHA_reverse,1,Metab__2-Ketoisovaleric acid_c,0.62
+Enzyme5635__CAD_reverse,1,Metab__L-Aspartic acid_c,0.59
+Enzyme7328__TKT_reverse,1,Metab__D-Erythrose 4-phosphate_c,1
+Metab__Beta-D-Fructose 6-phosphate_c,1,Enzyme7328__TKT_reverse,1
+Enzyme7584__NME3_reverse,1,Metab__CDP_c,1
+NOS3,1,Enzyme1108__NOS3,0.62
+CPT1C,1,Enzyme2533__CPT1C,0.56
+PRDX6,1,Enzyme4351__PRDX6,1
+GAD1,1,Enzyme5471__GAD1,1
+HK2,1,Enzyme9715__HK2,0.21
+LDHA,1,Enzyme4097__LDHB_LDHA_reverse,0.62
+CAD,1,Enzyme5635__CAD_reverse,0.59
+NME3,1,Enzyme7584__NME3_reverse,1
+PDPK1,1,AKT1,1
+TP53,1,P4HA2,0.63
+LCK,1,ACP1,1
+MAPK1,-1,PPARG,0.05
+AKT1,1,TKT,1
+PPARA,-1,CPT1A,0.18
+ARNT,1,NT5E,1
+LCK,1,AKT1,1
+SP1,-1,CPT1A,0.56
+AKT1,1,ARNT,1
+PRKCE,1,PLD1,0.89
+E2F4,-1,PPARG,0.05
+MBD1,-1,SETDB1,1
+NFKB1,-1,AKT1,1
+PPARG,1,TP53,0.05
+MAPK1,-1,LCK,1
+CSNK2A1,-1,ARNT,1
+Enzyme98__ACP1,1,Metab__Riboflavin_c,1
+Enzyme4789__SETDB1,1,Metab__S-Adenosylhomocysteine_c,0.97
+Enzyme6462__CPT1A,1,Metab__Levocarnitine propionate_c,0.56
+Enzyme6463__CPT1A,1,Metab__Butyrylcarnitine_c,0.56
+Enzyme6466__CPT1A,1,Metab__Isovalerylcarnitine_c,0.56
+Enzyme7614__NT5E,1,Metab__Cytidine_c,1
+Enzyme7634__NT5E,1,Metab__Inosine_c,1
+Enzyme8423__P4HA2,1,Metab__Butanedioic acid_c,0.63
+Enzyme10508__PLD1,1,Metab__Ethanolamine_c,0.89
+Enzyme1260__UPP1_reverse,1,Metab__Uridine_c,1
+Metab__Ribose 1-phosphate_c,1,Enzyme1260__UPP1_reverse,1
+Enzyme3782__TKT_reverse,1,r5p,1
+Enzyme7304__PGM1_reverse,1,Metab__Ribose 1-phosphate_c,1
+r5p,1,Enzyme7304__PGM1_reverse,1
+ACP1,1,Enzyme98__ACP1,1
+SETDB1,1,Enzyme4789__SETDB1,0.97
+CPT1A,1,Enzyme6462__CPT1A,0.56
+CPT1A,1,Enzyme6463__CPT1A,0.56
+CPT1A,1,Enzyme6466__CPT1A,0.56
+NT5E,1,Enzyme7614__NT5E,1
+NT5E,1,Enzyme7634__NT5E,1
+P4HA2,1,Enzyme8423__P4HA2,0.63
+PLD1,1,Enzyme10508__PLD1,0.89
+TKT,1,Enzyme3782__TKT_reverse,1
+MAPK1,1,MED1,0.28
+MED1,1,CPT1A,0.28
+HIF1A,1,HK1,0.3
+Enzyme1573__HK1,1,Metab__Beta-D-Fructose 6-phosphate_c,0.12
+Enzyme2533__CPT1A,1,Metab__L-Octanoylcarnitine_c,0.44
+Enzyme7338__LDHB_LDHA,1,Metab__2-Oxopropanoic acid_c,0.42
+Metab__Beta-D-Fructose 6-phosphate_c,1,Enzyme7547__GFPT1,0.41
+Enzyme7547__GFPT1,1,Metab__L-Glutamic acid_c,0.41
+Enzyme1583__ALDOA_reverse,1,HC00361,0.31
+Metab__D-Erythrose 4-phosphate_c,1,Enzyme1583__ALDOA_reverse,0.31
+Enzyme1584__PFKL_reverse,1,Metab__D-Sedoheptulose 7-phosphate_c,0.44
+HC00361,1,Enzyme1584__PFKL_reverse,0.44
+Enzyme3636__GOT1_reverse,1,Metab__alpha-Ketoglutaric acid_c,0.41
+Enzyme3636__GOT1_reverse,1,Metab__L-Aspartic acid_c,0.41
+Metab__L-Glutamic acid_c,1,Enzyme3636__GOT1_reverse,0.41
+HK1,1,Enzyme1573__HK1,0.12
+CPT1A,1,Enzyme2533__CPT1A,0.44
+LDHA,1,Enzyme7338__LDHB_LDHA,0.42
+MED1,-1,TP53,0.28
+AKT1,1,RXRB,0.08
+RXRB,1,CPT1C,0.23
+Enzyme6462__CPT1C,1,Metab__Levocarnitine propionate_c,0.44
+Enzyme6463__CPT1C,1,Metab__Butyrylcarnitine_c,0.44
+Enzyme6466__CPT1C,1,Metab__Isovalerylcarnitine_c,0.44
+CPT1C,1,Enzyme6462__CPT1C,0.44
+CPT1C,1,Enzyme6463__CPT1C,0.44
+CPT1C,1,Enzyme6466__CPT1C,0.44
+MYC,1,BCAT1,0.38
+Metab__alpha-Ketoglutaric acid_c,1,Enzyme3740__BCAT1,0.38
+Enzyme3740__BCAT1,1,Metab__2-Ketoisovaleric acid_c,0.38
+Enzyme7575__BCAT1_reverse,1,Metab__alpha-Ketoglutaric acid_c,0.27
+BCAT1,1,Enzyme3740__BCAT1,0.38
+BCAT1,1,Enzyme7575__BCAT1_reverse,0.27
+PRKCE,1,STAT3,0.17
+LCK,1,STAT3,0.17
+AKT1,1,STAT3,0.17
+STAT3,1,CPT1C,0.41
+Enzyme9689__NOS3,1,Metab__Citrulline_c,0.31
+NOS3,1,Enzyme9689__NOS3,0.31
+Enzyme7704__HK2,1,Metab__Beta-D-Fructose 6-phosphate_c,0.06
+HK2,1,Enzyme7704__HK2,0.06
+HIF1A,1,GPI,0.32
+Enzyme4823__GPI,1,Metab__Beta-D-Fructose 6-phosphate_c,0.18
+GPI,1,Enzyme4823__GPI,0.18
+Enzyme9715__HK1,1,Metab__Beta-D-Fructose 6-phosphate_c,0.12
+HK1,1,Enzyme9715__HK1,0.12
+PTK2B,-1,NOS3,0.13
+MAPK1,1,RXRB,0.15
+Enzyme7283__GPI,1,Metab__Beta-D-Fructose 6-phosphate_c,0.14
+GPI,1,Enzyme7283__GPI,0.14
+PTK2B,1,LCK,0.13
+PTK2B,1,TP53,0.13
+PRKCE,1,PTK2B,0.13
+Enzyme1573__HK2,1,Metab__Beta-D-Fructose 6-phosphate_c,0.11
+HK2,1,Enzyme1573__HK2,0.11
+MAPK1,1,RXRA,0.13
+CDK1,1,RXRA,0.13
+RXRA,1,CPT1C,0.16
+MAPK11,1,USF1,0.37
+LCK,1,MAPK11,0.37
+USF1,1,P4HA1,0.37
+Enzyme8423__P4HA1,1,Metab__Butanedioic acid_c,0.37
+P4HA1,1,Enzyme8423__P4HA1,0.37
+VDR,1,RXRA,0.03
+NR2F1,1,RXRA,0.03
+AKT1,1,RXRA,0.03
+MAPK1,-1,RXRA,0.03
+MAPK1,1,STAT3,0.24
+Enzyme7704__HK1,1,Metab__Beta-D-Fructose 6-phosphate_c,0.06
+HK1,1,Enzyme7704__HK1,0.06
+TP53,-1,STAT3,0.08
+PRKCA,-1,NOS1,0.07
+Enzyme1108__NOS1,1,Metab__Citrulline_c,0.07
+NOS1,1,Enzyme1108__NOS1,0.07
+PDPK1,1,PRKCA,0.14
+PRKCA,1,TP53,0.14
+PRKCA,1,PLD2,0.11
+PRKCA,1,PPARA,0.14
+Enzyme10508__PLD2,1,Metab__Ethanolamine_c,0.11
+PLD2,1,Enzyme10508__PLD2,0.11
+PRKCA,-1,NOS3,0.07
+Enzyme3712__BCAT1_reverse,1,Metab__alpha-Ketoglutaric acid_c,0.11
+BCAT1,1,Enzyme3712__BCAT1_reverse,0.11
+Enzyme8252__SETDB1,1,Metab__S-Adenosylhomocysteine_c,0.03
+SETDB1,1,Enzyme8252__SETDB1,0.03
+CDK1,1,SIRT1,0.03
+SIRT1,-1,TP53,0.03
+PRKCA,1,PLD1,0.03
+MAPK1,1,NCOA1,0.02
+NCOA1,1,CPT1A,0.02
+PPARG,1,CPT1C,0.02
