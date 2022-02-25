@@ -13,5 +13,10 @@ meta_PKN <- as.data.frame(rbind(meta_PKN, recon3D_connected))
 
 meta_PKN[is.na(meta_PKN$source) | is.na(meta_PKN$target),]
 
+meta_PKN <- unique(meta_PKN)
+
 save(meta_PKN, file = "results/meta_PKN.RData")
 
+meta_network <- meta_PKN
+meta_network <- meta_network[,c(1,3,2)]
+names(meta_network) <- c("source", "interaction", "target")
