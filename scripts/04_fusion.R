@@ -20,3 +20,5 @@ save(meta_PKN, file = "results/meta_PKN.RData")
 meta_network <- meta_PKN
 meta_network <- meta_network[,c(1,3,2)]
 names(meta_network) <- c("source", "interaction", "target")
+
+# save(meta_PKN, file = "../cosmosR/data/meta_network.RData")
