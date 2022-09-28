@@ -1,0 +1,17 @@
+[2022-09-28 16:50:12] [INFO]    [OmnipathR] Initialized cache: `/Users/aureliendugourd/Library/Caches/OmnipathR`.
+[2022-09-28 16:50:12] [INFO]    [OmnipathR] Welcome to OmnipathR!
+[2022-09-28 16:50:14] [TRACE]   [OmnipathR] Loaded data from RDS `/Users/aureliendugourd/Library/Caches/OmnipathR/ab3e95483755ceb7ed8681fb385fdd56653aa58c-1.rds`.
+[2022-09-28 16:50:14] [INFO]    [OmnipathR] Loaded from cache: `https://omnipathdb.org/interactions?genesymbols=yes&datasets=dorothea,kinaseextra,ligrecextra,lncrna_mrna,mirnatarget,omnipath,pathwayextra,small_molecule,tf_mirna,tf_target,tfregulons&organisms=9606&dorothea_levels=A,B&fields=type,dorothea_level,sources,references,curation_effort&license=academic`
+[2022-09-28 16:50:17] [SUCCESS] [OmnipathR] Loaded 174540 interactions from cache.
+[2022-09-28 16:50:25] [TRACE]   [OmnipathR] Loaded data from RDS `/Users/aureliendugourd/Library/Caches/OmnipathR/ab3e95483755ceb7ed8681fb385fdd56653aa58c-1.rds`.
+[2022-09-28 16:50:25] [INFO]    [OmnipathR] Loaded from cache: `https://omnipathdb.org/interactions?genesymbols=yes&datasets=dorothea,kinaseextra,ligrecextra,lncrna_mrna,mirnatarget,omnipath,pathwayextra,small_molecule,tf_mirna,tf_target,tfregulons&organisms=9606&dorothea_levels=A,B&fields=type,dorothea_level,sources,references,curation_effort&license=academic`
+[2022-09-28 16:50:27] [SUCCESS] [OmnipathR] Loaded 174540 interactions from cache.
+[2022-09-28 16:50:33] [TRACE]   [OmnipathR] Loaded data from RDS `/Users/aureliendugourd/Library/Caches/OmnipathR/ab3e95483755ceb7ed8681fb385fdd56653aa58c-1.rds`.
+[2022-09-28 16:50:33] [INFO]    [OmnipathR] Loaded from cache: `https://omnipathdb.org/interactions?genesymbols=yes&datasets=dorothea,kinaseextra,ligrecextra,lncrna_mrna,mirnatarget,omnipath,pathwayextra,small_molecule,tf_mirna,tf_target,tfregulons&organisms=9606&dorothea_levels=A,B&fields=type,dorothea_level,sources,references,curation_effort&license=academic`
+[2022-09-28 16:50:36] [SUCCESS] [OmnipathR] Loaded 174540 interactions from cache.
+[2022-09-28 16:59:28] [TRACE]   [OmnipathR] Loaded data from RDS `/Users/aureliendugourd/Library/Caches/OmnipathR/ab3e95483755ceb7ed8681fb385fdd56653aa58c-1.rds`.
+[2022-09-28 16:59:28] [INFO]    [OmnipathR] Loaded from cache: `https://omnipathdb.org/interactions?genesymbols=yes&datasets=dorothea,kinaseextra,ligrecextra,lncrna_mrna,mirnatarget,omnipath,pathwayextra,small_molecule,tf_mirna,tf_target,tfregulons&organisms=9606&dorothea_levels=A,B&fields=type,dorothea_level,sources,references,curation_effort&license=academic`
+[2022-09-28 16:59:33] [SUCCESS] [OmnipathR] Loaded 174540 interactions from cache.
+[2022-09-28 17:00:25] [TRACE]   [OmnipathR] Loaded data from RDS `/Users/aureliendugourd/Library/Caches/OmnipathR/ab3e95483755ceb7ed8681fb385fdd56653aa58c-1.rds`.
+[2022-09-28 17:00:25] [INFO]    [OmnipathR] Loaded from cache: `https://omnipathdb.org/interactions?genesymbols=yes&datasets=dorothea,kinaseextra,ligrecextra,lncrna_mrna,mirnatarget,omnipath,pathwayextra,small_molecule,tf_mirna,tf_target,tfregulons&organisms=9606&dorothea_levels=A,B&fields=type,dorothea_level,sources,references,curation_effort&license=academic`
+[2022-09-28 17:00:29] [SUCCESS] [OmnipathR] Loaded 174540 interactions from cache.
