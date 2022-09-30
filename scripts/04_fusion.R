@@ -21,4 +21,12 @@ meta_network <- meta_PKN
 meta_network <- meta_network[,c(1,3,2)]
 names(meta_network) <- c("source", "interaction", "target")
 
+#probably erroneous interaction
+meta_network <- meta_network[-which(meta_network$source == "PRKCA" & meta_network$target == "SRC"),]
+
+#probably erroneous interaction
+meta_network <- meta_network[-which(meta_network$source == "LTC4S"),] #I don't know where this interaction comes from, the sources are wrong (https://www.nature.com/articles/onc2008228)
+
+meta_network <- meta_network[!(grepl("CAD_reverse",meta_network$source) | grepl("CAD_reverse",meta_network$target)) ,] #redHuman confirms that the reaction is actually not reversible
+
 # save(meta_network, file = "../cosmosR/data/meta_network.RData")
